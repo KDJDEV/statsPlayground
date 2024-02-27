@@ -3,7 +3,7 @@ This script answers the below question using Markov Chains.
 
 "There is a set of n cards that come in randomized packs of 1. What is the expected number of packs you would have to open before you have the entire set?"
 
-It essentially works by finding the state vectors after drawing certain numbers of packs and then computing the expected value by summing up the probabilities associated with the desired state of getting all of the cards.
+It essentially works by finding the state vectors after drawing certain numbers of packs and then computing the expected value by summing up the probabilities associated with the desired state (getting all of the cards).
 """
 
 import numpy as np
