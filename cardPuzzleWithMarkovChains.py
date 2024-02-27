@@ -46,16 +46,30 @@ def nthHarmonic(n):
 trueExpectedValue = nthHarmonic(n) * n
 print("Error: " + str(trueExpectedValue - expectedValue))
 
-"""EXTRA FUNCTION TO PRINT PROBABILITY DISTRIBUTION FOR K PACKS"""
+
+"""
+EXTRA FUNCTION TO GRAPH PROBABILITY DISTRIBUTION OVER TIME FOR K PACKS
+uncomment line 73 to create the gif
+"""
+import gif
+@gif.frame
 def plotProbabilities(packs):
     import matplotlib.pyplot as plt
     from numpy.linalg import matrix_power
     stateVector = getStateVector()
     data = (stateVector @ (matrix_power(matrix, packs))).flatten()
     plt.bar(range(len(data)), data)
-    plt.xlabel('Number of Cards')
+    plt.xlabel('Number of Cards Collected')
     plt.ylabel('Probability')
-    plt.title('Probability Distribution for ' + str(n) + ' packs')
-    plt.show()
+    plt.title('Probability Distribution for ' + str(packs) + ' packs')
+    plt.ylim(0, 1)
 
-plotProbabilities(20)
+def createGif():
+    frames = [plotProbabilities(i) for i in range(100)]
+    gif.save(frames, 'images/cardPuzzle.gif', duration=150)
+
+createGif()
+
+
+
+
