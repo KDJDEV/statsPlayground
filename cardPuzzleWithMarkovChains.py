@@ -49,7 +49,6 @@ print("Error: " + str(trueExpectedValue - expectedValue))
 
 """
 EXTRA FUNCTION TO GRAPH PROBABILITY DISTRIBUTION OVER TIME FOR K PACKS
-uncomment line 73 to create the gif
 """
 import gif
 @gif.frame
