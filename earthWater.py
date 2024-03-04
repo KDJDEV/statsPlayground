@@ -21,6 +21,8 @@ with open("data/10000RandomNumbers.txt", "r") as file: #data is from https://www
         coords.append((lat, lon))
         isOnLand.append(globe.is_land(lat, lon))
 
+print("# in water: " + str(numSamples - isOnLand.count(True)))
+print("# on land: " + str(isOnLand.count(True)))
 print("Proportion that are in water: " + str(1 - isOnLand.count(True)/numSamples))
         
 
