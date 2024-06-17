@@ -57,3 +57,5 @@ Here is the output of this function run on the first 15 values for $n$:
 
 
 As the table shows, $P(Tie;n)$ is a monotonically decreasing function.
+
+Therefore, you are more likely to tie with one tie and ties will only get less likely as you add more dice.
